@@ -1,8 +1,8 @@
-# Start from a Nature article
-- OCA-T1 and OCA-T2 are coactivators of POU2F3 in the tuft cell lineage - 7 July, 2022 - Nature
-
 # ConSurf-debug
 Stand Alone version of ConSurf with detailed tutorial - (installation + database + usage)
+
+# Start from a Nature article
+- OCA-T1 and OCA-T2 are coactivators of POU2F3 in the tuft cell lineage - 7 July, 2022 - Nature
 
 # About ConSurf
 - https://consurf.tau.ac.il/consurf_index.php
@@ -65,9 +65,9 @@ python stand_alone_consurf.py --algorithm HMMER --Maximum_Likelihood --seq /home
 ```
 
 6. Compare results from stand alone and web server versions.
-Confirmed. The same.
+**Confirmed. The same.**
 
-# others
+# Others
 - all log info is in `test/log.txt` file. The full command and error info. It's useful for debug.
 - a similar tool using deep learning. `vespa_emb Input_protein_seq -o data/embeddings.h5  --prott5_weights_cache data/cache` [don't like it!]
 - One module (-im) of rate4site is broken. `Likelihood after optimization is -0x1.c39f46ba773c5p+14`. The log(likelihoodsV[pos]) is negative and the script will stop. So we will use (-ib) module [rate inference method].
@@ -77,8 +77,8 @@ Abort trap: 6
 ```
 
 # How I debug?
-- see `log.txt` file, check where the program stoped;
-- use sublime, search the folder to locate the stop code;
+- see `log.txt` file, check where the program stopped;
+- use sublime, search the folder to locate the code that send the error;
 - insert print or log code to output the logic of the program;
 - soon, you will find the bug.
 
