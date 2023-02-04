@@ -24,9 +24,11 @@ make install
 ```
 - Note1: It could be successfully installed, but with some bugs like below. We can just ignore it. 
 - Note2: The default algorithm `-im` is broken, we must use `-ib`, so we will add `--Maximum_Likelihood` when running `python stand_alone_consurf.py`. 
-error:
+```
+# error:
 rate4site: errorMsg.cpp:41: static void errorMsg::reportError(const string&, int): Assertion `0' failed.
 Aborted (core dumped)
+```
 
 3. create conda env [see instructions.txt file]
 ```
