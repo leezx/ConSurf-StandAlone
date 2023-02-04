@@ -1,0 +1,15 @@
+Change the directories of the databses in the file GENERAL_CONSTANTS.py to the directories of the databases of your system.
+Load modules: module load python/python-3.8 hmmr/hmmr-3.1b2 clustalw/2.1
+Create a directory for the output.
+Put the input files in the directory.
+When you run the program you must add flags indicating the directory and the input files.
+To find the right flags: python stand_alone_consurf.py -h
+Example: --dir /bentallab/Barak2/stand_alone/work  --pdb 4tra.pdb --chain A --Nuc --msa msa.aln --query Input_pdb_SEQRES_A --tree tree.txt
+The meaning of these flags is:
+--dir out put directory
+--pdb pdb file
+--chain the chain
+--Nuc nucleic acid
+--msa msa file
+--query query sequence in the msa
+--tree tree file
