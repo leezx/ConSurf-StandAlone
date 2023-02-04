@@ -6,11 +6,11 @@ Stand Alone version of ConSurf with detailed tutorial - (installation + database
 
 # About ConSurf
 - https://consurf.tau.ac.il/consurf_index.php
-- stand alone python wrapper: https://consurf.tau.ac.il/STANDALONE/stand_alone_consurf-1.00.rar
-- ConSurf DB: https://consurfdb.tau.ac.il/ [not useful, file cannot be downloaded]
+- Stand alone python wrapper: https://consurf.tau.ac.il/STANDALONE/stand_alone_consurf-1.00.rar
+- ConSurf DB: https://consurfdb.tau.ac.il/ [not useful, files cannot be downloaded]
 - ConSurf Github: https://github.com/Rostlab/ConSurf [not update anymore since 2015. Just take a glimpse, we won't use it]
 
-# installation
+# Installation
 1. download python script (wrapper) from https://consurf.tau.ac.il/STANDALONE/stand_alone_consurf-1.00.rar
 
 2. download Rate4Site from https://www.tau.ac.il/~itaymay/cp/rate4site.html
@@ -64,13 +64,13 @@ PRT_JAR_FILE = "/home/zz950/softwares/ConSurf/prottest-3.4.2/prottest-3.4.2.jar"
 python stand_alone_consurf.py --algorithm HMMER --Maximum_Likelihood --seq /home/zz950/softwares/ConSurf/test.fasta --dir /home/zz950/softwares/ConSurf/test
 ```
 
-6. Compare results from stand alone and web server versions.
+6. Compare results between stand alone and web server versions.
 **Confirmed. The same.**
 
 # Others
-- all log info is in `test/log.txt` file. The full command and error info. It's useful for debug.
+- all log info is in `test/log.txt` file. It contains the full commands and error info. It's useful for debug.
 - a similar tool using deep learning. `vespa_emb Input_protein_seq -o data/embeddings.h5  --prott5_weights_cache data/cache` [don't like it!]
-- One module (-im) of rate4site is broken. `Likelihood after optimization is -0x1.c39f46ba773c5p+14`. The log(likelihoodsV[pos]) is negative and the script will stop. So we will use (-ib) module [rate inference method].
+- One module (-im) of rate4site is broken. `Likelihood after optimization is -0x1.c39f46ba773c5p+14`. The log(likelihoodsV[pos]) is negative and the script will stop. So we will use (-ib) module [These are rate inference methods].
 ```
 Assertion failed: (log(likelihoodsV[pos])>0.0), function computeML_siteSpecificRate, file siteSpecificRate.cpp, line 27.
 Abort trap: 6
@@ -78,7 +78,7 @@ Abort trap: 6
 
 # How I debug?
 - see `log.txt` file, check where the program stopped;
-- use sublime, search the folder to locate the code that send the error;
+- use sublime, search the source code folder to locate the code that send the error;
 - insert print or log code to output the logic of the program;
 - soon, you will find the bug.
 
